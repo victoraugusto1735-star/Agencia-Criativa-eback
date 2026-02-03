@@ -8,76 +8,78 @@
 </head>
 <body>
 
-<header>
-    <div class="logo">Agência Criativa</div>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sobre">Sobre nós</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#depoimento">Depoimentos</a></li>
-            <li><a href="#contato">Contato</a></li>
+<header class="header">
+    <div class="header__logo">Agência Criativa</div>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item nav__item--home"><a class="nav__link nav__link--home" href="#home">Home</a></li>
+            <li class="nav__item nav__item--sobre"><a class="nav__link nav__link--active" href="#sobre">Sobre nós</a></li>
+            <li class="nav__item nav__item--servicos"><a class="nav__link nav__link--servicos" href="#servicos">Serviços</a></li>
+            <li class="nav__item nav__item--depoimentos"><a class="nav__link nav__link--depoimentos" href="#depoimento">Depoimentos</a></li>
+            <li class="nav__item nav__item--contato"><a class="nav__link nav__link--contato" href="#contato">Contato</a></li>
         </ul>
     </nav>
 </header>
 
 <section id="home" class="home">
-    <div class="home-texto">
-        <h1>Criamos soluções digitais</h1>
-        <p>Somos uma agência criativa</p>
+    <div class="home__container home__container--texto">
+        <h1 class="home__titulo home__titulo--principal">Criamos soluções digitais</h1>
+        <p class="home__texto home__texto--subtitulo">
+            Transformamos a complexidade tecnológica 
+            em simplicidade criativa: 
+            Criamos soluções digitais que 
+            dão voz e forma ao seu negócio 
+            no mundo conectado.
+        </p>
     </div>
 
     <img 
-        src="vitinho.png" alt="logo Vitinho CSS"
-        srcset="
-            img/vitinho.png 600w,
-            img/vitinho-medium.png 1000w,
-            img/vitinho-large.png 1600w
-        "
+        class="home__img home__img--banner"
+        src="vitinho-png" 
+        srcset="img/vitinho.png 600w, img/vitinho-medium.png 1000w, img/vitinho-large.png 1600w"
         sizes="(max-width: 768px) 100vw, 50vw"
         alt="Banner Vitinho CSS"
     >
 </section>
 
 <section id="servicos" class="servicos">
-    <h2>Nossos Serviços</h2>
+    <h2 class="servicos__titulo">Nossos Serviços</h2>
 
-    <div class="servico-item">
-        <div class="card">Design Gráfico</div>
-        <div class="card">Desenvolvimento Web</div>
-        <div class="card">Branding</div>
-        <div class="card">Marketing Digital</div>
-        <div class="card">UX/UI Design</div>
-        <div class="card">Consultoria Digital</div>
+    <div class="servicos__grid">
+        <div class="servicos__card servicos__card--design">Design Gráfico</div>
+        <div class="servicos__card servicos__card--web">Desenvolvimento Web</div>
+        <div class="servicos__card servicos__card--branding">Branding</div>
+        <div class="servicos__card servicos__card--marketing">Marketing Digital</div>
+        <div class="servicos__card servicos__card--ux">UX/UI Design</div>
+        <div class="servicos__card servicos__card--consultoria">Consultoria Digital</div>
     </div>
 </section>
 
 <section id="depoimento" class="depoimento">
-    <h2>Depoimentos</h2>
-
-    <p>A agência superou nossas expectativas</p>
-    <span>- João Silva</span>
+    <h2 class="depoimento__titulo">Depoimentos</h2>
+    <p class="depoimento__frase depoimento__frase--destaque">A agência superou nossas expectativas</p>
+    <span class="depoimento__autor depoimento__autor--nome">- João Silva</span>
 </section>
 
 <section id="contato" class="contato">
-    <h2>Contato</h2>
+    <h2 class="contato__titulo">Contato</h2>
 
-    <div class="contato-info">
-        <p><strong>Endereço:</strong> Rua Exemplo, 123</p>
-        <p><strong>Telefone:</strong> (11) 99999-9999</p>
-        <p><strong>Email:</strong> contato@agenciacreative.com</p>
+    <div class="contato__info">
+        <p class="contato__detalhe contato__detalhe--endereco"><strong>Endereço:</strong> Rua Exemplo, 123</p>
+        <p class="contato__detalhe contato__detalhe--telefone"><strong>Telefone:</strong> (11) 99999-9999</p>
+        <p class="contato__detalhe contato__detalhe--email"><strong>Email:</strong> contato@agenciacreative.com</p>
     </div>
 
-    <form class="formulario">
-        <input type="text" placeholder="Seu nome" required>
-        <input type="email" placeholder="Seu email" required>
-        <textarea placeholder="Mensagem" required></textarea>
-        <button type="submit">Enviar</button>
+    <form class="formulario formulario--contato">
+        <input class="formulario__campo formulario__campo--nome" type="text" placeholder="Seu nome" required>
+        <input class="formulario__campo formulario__campo--email" type="email" placeholder="Seu email" required>
+        <textarea class="formulario__campo formulario__campo--mensagem" placeholder="Mensagem" required></textarea>
+        <button class="formulario__botao formulario__botao--enviar" type="submit">Enviar</button>
     </form>
 </section>
 
-<footer>
-    <p>&copy; 2026 Agência Criativa</p>
+<footer class="footer">
+    <p class="footer__texto footer__texto--copyright">&copy; 2026 Agência Criativa</p>
 </footer>
 
 </body>

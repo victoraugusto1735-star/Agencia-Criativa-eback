@@ -1,20 +1,17 @@
-/* RESET */
+/*RESET*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* VARIÁVEIS DE IDENTIDADE VISUAL */
 :root {
-    --cor-primaria: #0f172a;
-    --cor-secundaria: #6366f1;
-    --cor-fundo: #f8fafc;
-    --cor-texto: #334155;
+    --cor-primaria: #ad5df8;
+    --cor-fundo: #000000;
+    --cor-texto: #ffffff;
     --fonte-principal: 'Arial', sans-serif;
 }
 
-/* GERAL */
 body {
     font-family: var(--fonte-principal);
     color: var(--cor-texto);
@@ -22,173 +19,153 @@ body {
     line-height: 1.6;
 }
 
-/* ================= HEADER ================= */
-header {
-    display: flex; /* FLEXBOX */
+/* HEADER */
+.header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 5vw;
     background: var(--cor-primaria);
 }
 
-.logo {
-    font-size: 1.6rem;
+.header__logo {
+    font-size: 2rem;
     font-weight: bold;
-    color: white;
+    color: #ffffff;
 }
 
-nav ul {
-    display: flex; /* FLEXBOX */
+.nav__list {
     list-style: none;
-    gap: 2rem;
+    display: flex;
+    gap: 1rem;
 }
 
-nav a {
-    color: white;
+.nav__link {
+    color: #ffffff;
     text-decoration: none;
-    font-size: 1rem;
+    font-weight: bold;
 }
 
-nav a:hover {
-    color: var(--cor-secundaria);
+.nav__link--active {
+    text-decoration: underline;
 }
 
-/* ================= HOME ================= */
+/* HOME */
 .home {
-    display: flex; /* FLEXBOX */
+    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
     padding: 10vh 5vw;
 }
 
-.home-texto h1 {
+.home__titulo--principal {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--cor-primaria);
 }
 
-.home-texto p {
+.home__texto--subtitulo {
     font-size: 1.2rem;
 }
 
-.home img {
+.home__img--banner {
     max-width: 45%;
     height: auto;
 }
 
-/* ================= SEÇÕES ================= */
-section {
-    padding: 4rem 5vw;
-}
+/* SERVIÇOS */
+.servicos { padding: 4rem 5vw; }
 
-h2 {
+.servicos__titulo {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
     color: var(--cor-primaria);
 }
 
-/* ================= SERVIÇOS ================= */
-.servico-item {
-    display: grid; /* CSS GRID */
+.servicos__grid {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
 }
 
-.card {
-    background: white;
+.servicos__card {
+    background: var(--cor-primaria);
     padding: 2rem;
     text-align: center;
     border-radius: 10px;
     font-weight: bold;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* ================= DEPOIMENTOS ================= */
+/* DEPOIMENTOS */
 .depoimento {
-    background: #e2e8f0;
+    padding: 4rem 5vw;
+    background: #ffffff;
     text-align: center;
+    color: var(--cor-primaria);
 }
 
-.depoimento p {
+.depoimento__frase--destaque {
     font-size: 1.2rem;
+    color: #000000;
 }
 
-.depoimento span {
+.depoimento__autor--nome {
     font-weight: bold;
+    color: #000000;
 }
 
-/* ================= CONTATO ================= */
-.contato {
-    display: grid;
-    gap: 2rem;
-}
+/* FORMULÁRIO */
+.contato { padding: 4rem 5vw; }
 
-.contato-info {
+.contato__titulo {
     text-align: center;
+    color: var(--cor-primaria);
+    margin-bottom: 2rem;
 }
+
+.contato__info { text-align: center; margin-bottom: 2rem; }
 
 .formulario {
     max-width: 400px;
     margin: auto;
-    display: flex; /* FLEXBOX */
+    display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.formulario input,
-.formulario textarea {
+.formulario__campo {
     padding: 0.8rem;
-    font-size: 1rem;
     border-radius: 5px;
     border: 1px solid #cbd5f5;
 }
 
-.formulario textarea {
+.formulario__campo--mensagem {
     resize: none;
     height: 120px;
 }
 
-.formulario button {
+.formulario__botao--enviar {
     padding: 0.9rem;
-    background: var(--cor-secundaria);
-    color: white;
+    background: var(--cor-primaria);
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* ================= FOOTER ================= */
-footer {
+/* FOOTER */
+.footer {
     background: var(--cor-primaria);
-    color: white;
     text-align: center;
     padding: 1rem;
 }
 
-/* ================= RESPONSIVO ================= */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-
-    /* MENU RESPONSIVO */
-    header {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    /* HOME */
-    .home {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .home img {
-        max-width: 100%;
-    }
+    .header { flex-direction: column; gap: 1rem; }
+    .nav__list { flex-direction: column; align-items: center; }
+    .home { flex-direction: column; text-align: center; }
+    .home__img--banner { max-width: 100%; }
 }
