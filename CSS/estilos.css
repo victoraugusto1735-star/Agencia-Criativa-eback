@@ -1,0 +1,118 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+  --cor-primaria: #ad5df8;
+  --cor-fundo: #000;
+  --cor-texto: #fff;
+  --fonte: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+  font-family: var(--fonte);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 5vw;
+  background: var(--cor-primaria);
+}
+
+.nav__list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* HOME */
+.home {
+  display: flex;
+  justify-content: space-between;
+  padding: 10vh 5vw;
+}
+
+.home__titulo--principal {
+  color: var(--cor-primaria);
+  font-size: 2.5rem;
+}
+
+.home__img--banner {
+  max-width: 45%;
+}
+
+/* SERVIÇOS */
+.servicos {
+  padding: 4rem 5vw;
+}
+
+.servicos__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.servicos__card {
+  background: var(--cor-primaria);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* DEPOIMENTOS */
+.depoimento {
+  padding: 4rem 5vw;
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+
+/* CONTATO */
+.contato {
+  padding: 4rem 5vw;
+}
+
+.formulario {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario__campo {
+  padding: 0.8rem;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--cor-primaria);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .home,
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home__img--banner {
+    max-width: 100%;
+  }
+}

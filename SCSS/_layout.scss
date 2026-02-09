@@ -1,0 +1,36 @@
+@use 'variaveis';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 5vw;
+  background: v.$cor-primaria;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  padding: 10vh 5vw;
+}
+
+.servicos {
+  padding: 4rem 5vw;
+}
+
+.depoimento {
+  padding: 4rem 5vw;
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.contato {
+  padding: 4rem 5vw;
+}
+
+.footer {
+  background: v.$cor-primaria;
+  text-align: center;
+  padding: 1rem;
+}
+

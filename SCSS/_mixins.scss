@@ -1,0 +1,14 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin botao-padrao {
+  pedding: $espacamento-padrao;
+  background: $cor-primaria;
+  color: $cor-texto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+

@@ -1,0 +1,24 @@
+@use "variaveis";
+@use "mixins";
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav__link {
+  color: v.$cor-texto;
+  text-decoration: none;
+}
+
+.servicos__card {
+  background: v.$cor-primaria;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.formulario__botao--enviar {
+  @include m.botao-padrao;
+}
